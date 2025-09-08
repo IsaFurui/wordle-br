@@ -135,3 +135,5 @@ limbo
 dengo
 pinto
 turvo
+ancho
+abano
