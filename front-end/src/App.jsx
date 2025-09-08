@@ -56,7 +56,7 @@ function App() {
 
     if (!wordSet.has(currWord)) {
       try {
-        const res = await fetch('http://localhost:5000/api/check-word', {
+        const res = await fetch('/api/check-word', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ word: currWord }),
