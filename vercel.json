@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "front-end/package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "back-end/src/routes/wordRoutes.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/back-end/src/routes/wordRoutes.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/front-end/$1"
+    }
+  ],
+  "installCommand": "cd front-end && npm install",
+  "outputDirectory": "front-end/dist"
+}

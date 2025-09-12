@@ -56,7 +56,8 @@ function App() {
 
     if (!wordSet.has(currWord)) {
       try {
-        const res = await fetch('/api/check-word', {
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+        const res = await fetch(`${API_URL}/api/check-word`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ word: currWord }),
