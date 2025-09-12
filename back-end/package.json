@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/index.js",
-    "start": "node --env-file .env --experimental-strip-types --no-warnings src/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
